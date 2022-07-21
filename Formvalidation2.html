@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Formvalidation
+        </title>
+        <script>
+            function validate()
+            {
+                var emailid=document.getElementById("email").value;
+                var atpos = emailid.indexOf("@");
+                var dotpos = emailid.lastIndexOf(".");
+                if(document.getElementById("name").value=="")
+                {
+                    alert("Enter the value inside the name");
+                    document.getElementById("name").focus();
+                    return false;
+                }
+                else if(document.getElementById("email").value=="")
+                {
+                    alert("Enter the value inside the email");
+                    document.getElementById("email").focus();
+                    return false;
+                }
+                else if((atpos<1)||(dotpos-atpos<4))
+                {
+                    alert("please enter the valid email");
+                    document.getElementById("email").focus();
+                    return false;
+                }
+                else if(document.getElementById("zipcode").value=="")
+                {
+                    alert("Enter the value inside the zipcode");
+                    document.getElementById("zipcode").focus();
+                    return false;
+                }
+                
+                else if(document.getElementById("zipcode").value.length != 6)
+                {
+                    console.log(document.getElementById("zipcode").length);
+                    alert("please enter the valid zip code #######");
+                    document.getElementById("zipcode").focus();
+                    return false;
+                }
+                else if(document.getElementById("choose").value=="-1")
+                {
+                    alert("choose the value in the field");
+                    document.getElementById("choose").focus();
+                    return false;
+                }
+                return true;
+            }
+        </script>
+
+    </head>
+    <body>
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        <label for="name">
+                            Name:
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" id="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">
+                            Email:
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" id="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="zipcode">
+                            zipcode:
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" id="zipcode">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="choose">
+                            Country:
+                        </label>
+                    </td>
+                    <td>
+                        <select id="choose">
+                            <option value="-1">choose</option>
+                            <option >India</option>
+                            <option>usa</option>
+                        
+                        </select>
+                    </td>
+                </tr>
+                <tr colspan="2">
+                    <td>
+                        <input type="submit" value="validate" onclick="return(validate())">
+                    </td>
+
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
