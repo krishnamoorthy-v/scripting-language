@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mark</title>
+		<script type="text/javascript">
+		     function calc(thatform)
+		     {
+                var m1, m2, m3, total, avg, rank, grade;
+                m1=parseInt(thatform.m1.value);
+		        m2=parseInt(thatform.m2.value);
+		        m3=parseInt(thatform.m3.value);
+		        total = m1+m2+m3;
+		        avg = total/3;
+		        thatform.total.value = total;
+		        thatform.average.value = avg;
+		        
+		        if(m1<35 && m2<35 && m3<35)
+		        {
+		            grade=rank="null";
+		        }
+		        else if(avg>=75)
+		        {
+		            grade="A+";
+		            rank="Distinction";
+		       }
+		       else if(avg>=60)
+		       {
+		            grade="A";
+		            rank="First Class";
+		       }
+		       else if(avg>=50)
+		        {
+                    grade="B";
+                    rank="Second class";
+                }
+                else if(avg>=35)
+                {
+                    grade ="C";
+                    rank="Third class";
+                }
+                
+                thatform.grade.value= grade;
+                thatform.rank.value = rank;
+            }
+		</script>
+	</head>
+	<body>
+		<form>
+		    <table>
+		        <tr>
+		            <td>
+		                Name:
+		            </td>
+		            <td>
+		                <input type="text">
+		            </td>
+		        </tr>
+		        
+		         <tr>
+		            <td>
+		                class:
+		            </td>
+		            <td>
+		                <input type="text">
+		            </td>
+		        </tr>
+		        
+		        <tr rowspan="2" style="textalign='center'">
+		            <td >
+		                Subject
+		             </td>
+		        </tr>
+		        
+		         <tr>
+		            <td>
+		                Mark1:
+		            </td>
+		            <td>
+		                <input type="text" id="m1">
+		            </td>
+		        </tr>
+		        
+		        
+		         <tr>
+		            <td>
+		                Mark2:
+		            </td>
+		            <td>
+		                <input type="text" id="m2">
+		            </td>
+		        </tr>
+		        
+		         <tr>
+		            <td>
+		                Mark3:
+		            </td>
+		            <td>
+		                <input type="text" id="m3">
+		            </td>
+		        </tr>
+		        
+		         <tr>
+		            <td>
+		                Total:
+		            </td>
+		            <td>
+		                <input type="text" id="total">
+		            </td>
+		        </tr>
+		        
+		         <tr>
+		            <td>
+		                Average:
+		            </td>
+		            <td>
+		                <input type="text" id="average">
+		            </td>
+		        </tr>
+		        
+		         <tr>
+		            <td>
+		                Grade:
+		            </td>
+		            <td>
+		                <input type="text" id="grade">
+		            </td>
+		        </tr>
+		        
+		         <tr>
+		            <td>
+		                Rank:
+		            </td>
+		            <td>
+		                <input type="text" id="rank">
+		            </td>
+		        </tr>
+		        
+		         <tr>		           
+		            <td>
+		                <input type="button" value="calc" onclick="return(calc(this.form))">
+		            </td>
+		        </tr>
+		    </table>
+		</form>
+	</body>
+</html>
