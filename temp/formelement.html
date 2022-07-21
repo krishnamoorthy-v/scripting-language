@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FormElement</title>
+	    <script type="text/javascript">
+		    function formelement()
+		    {
+                alert("The number of form element is: "+document.getElementsByTagName('form')[0].length);
+            }
+		</script>
+	</head>
+	<body onload="formelement()">
+		   <form >
+		        <table>
+		            <tr>
+		                <td>
+		                    Name:
+		                </td>
+		                <td>
+		                    <input type="text">
+		                </td>
+		            </tr>
+		            
+		            <tr>
+		                <td>
+		                    Gender:
+		                </td>
+		                <td>
+		                    <input type="radio">Male
+		                </td>
+		                <td>
+		                    <input type="radio">Female
+		                </td>
+		            </tr>
+		            
+		            <tr>
+		                <td>
+		                    DOB:
+		                </td>
+		                <td>
+		                    <input type="date">
+		                </td>
+		            </tr>
+		            
+		            <tr>
+		                <td>
+		                    Email_id:
+		                </td>
+		                <td>
+		                    <input type="text">
+		                </td>
+		            </tr>
+		            
+		            <tr>
+		                <td>
+		                    password:
+		                </td>
+		                <td>
+		                    <input type="password">
+		                </td>
+		            </tr>
+		            
+		            <tr>
+		                <td>
+		                    Confirm password:
+		                </td>
+		                <td>
+		                    <input type="text">
+		                </td>
+		            </tr>
+		            
+		            <tr>
+		                <td>
+		                    Address:
+		                </td>
+		                <td>
+		                    <textarea cols="20" rows="4"></textarea>
+		                </td>
+		            </tr>
+		            
+		            
+		            <tr>
+		                <td>
+		                    Phone number:
+		                </td>
+		                <td>
+		                    <input type="text">
+		                </td>
+		            </tr>
+		            
+		            <tr>
+		                <td>
+		                    currency:
+		                </td>
+		                <td>
+		                    <select>
+		                        <option>INR</option>
+		                        <option>USD</option>
+		                        <option>Euro</option>
+		                    </select>
+		                </td>
+		            </tr>
+		            
+		            <tr>		         
+		                <td rowspan = "2">
+		                    <input type="checkbox">I agree the terms and condition
+		                </td>		                
+		            </tr>
+		            
+		            <tr>                
+		                <td>
+		                    <input type="submit">
+		                </td>
+		            </tr>
+		        </table>
+		   </form>
+
+	</body>
+</html>
