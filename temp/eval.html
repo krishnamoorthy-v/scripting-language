@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Evalution</title>
+		<script type="text/javascript">
+		    function calc(thatform)
+		    {
+		       var result = eval(thatform.expression.value);   
+		       thatform.result.value = result;
+		    }
+        </script>
+	</head>
+	<body>
+	<form>
+		<label>
+		    Calculation:
+		    <input type="text" id="expression">
+		</label><br>
+		<label>
+		    Result:
+		     <input type="text" id="result">
+		</label><br>
+		<input type="button" onclick="calc(this.form)" value="calculate">
+		<input type="reset">
+	</form>
+	</body>
+</html>
