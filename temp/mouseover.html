@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MouseOver</title>
+		<script type="text/javascript">
+		    function changeit(state)
+		    {
+		        if(state == 'over')
+		            document.getElementsByTagName('img')[0].src="image2.jpeg";
+		        else
+		            document.getElementsByTagName('img')[0].src="image.jpeg";
+		    }
+		 </script>
+	</head>
+	<body>
+		<img src="women.jpeg" width="400" height="500" type="image/jpeg" onmouseover="changeit('over')" onmouseleave = "changeit('leave')">
+	</body>
+</html>
